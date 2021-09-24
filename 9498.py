@@ -1,12 +1,12 @@
-a = map(int,input())
-
-if (90 < a and a < 100) :
+a = input()
+a = int(a)
+if (90 <= a) :
     print ('A')
-elif (80 < a and a< 89) : 
+elif (80 <= a) : 
     print('B')
-elif (70 < a and a <79):
+elif (70 <= a):
     print('C')
-elif (60 < a and a <69):
+elif (60 <= a):
     print('D')
 else :
     print('F')
