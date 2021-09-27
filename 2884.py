@@ -9,5 +9,4 @@ else :
 	else:
 		h = h - 1
 
-print(h )
-print(m)
+print(h, m )
