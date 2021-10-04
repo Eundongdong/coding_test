@@ -1,5 +1,6 @@
 a = int(input())
 
-for i in range(1,a):
-    b = a - i
-    print(i,b)
+for i in range(a):
+    x, y = map(int,input().split())
+    z = x+ y
+    print(z)
