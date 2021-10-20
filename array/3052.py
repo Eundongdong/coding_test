@@ -8,3 +8,4 @@ for i in range(len(num)):
         res.append(x)
 
 print(len(res))
+### 이 문제 다시 풀기
