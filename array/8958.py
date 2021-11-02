@@ -1,4 +1,12 @@
 num = int(input())
 for i in range(num):
-    a = map(int,input().split()) //어떻게 하나 단위로 읽을 수 있게 할 건지 고민해 봐야함
-    gggggggggggg
+    a = input()
+    score = 0
+    result = 0
+    for j in a:
+        if j =='O':
+            score +=1
+        else:
+            score = 0
+        result +=score
+    print(result)
