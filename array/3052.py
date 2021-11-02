@@ -7,4 +7,3 @@ for i in range(len(num)):
     if x not in res:
         res.append(x)
 
-print(len(res))
