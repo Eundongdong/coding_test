@@ -1,4 +1,4 @@
-# coding_test
-python으로 공부하는 코테
+# study algorithm
+python으로 공부하는 알고리즘
 
 백준 사이트 이용
