@@ -22,10 +22,11 @@ public class Main {
                 }
             }
         }
+        //같은 숫자라면
         if (flag) {
             answer[cmp + 1] +=1;
             return;
-        }else{
+        }else{ //다른 숫자가 끼어있다면 9개로 쪼개기
             int new_size = n / 3;
             for(int i = 0 ; i<3;i++){
                 for(int j = 0 ; j<3;j++){
@@ -56,7 +57,7 @@ public class Main {
         bw.write(String.valueOf(answer[2]));
         bw.flush();
         bw.close();
-//        System.out.println(Arrays.toString(answer));
+
 
     }
 }
