@@ -1,3 +1,8 @@
+//https://school.programmers.co.kr/learn/courses/30/lessons/72410#
+//PGS 2021 카카오 기출
+//풀이시간 : 40분
+//난이도 : 중 (IDE있으면 디버깅 모드로 쉽게 푸는 것 같다)
+
 package boj.stackqueue.newID;
 
 import java.util.*;
