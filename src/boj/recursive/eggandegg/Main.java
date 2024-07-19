@@ -68,7 +68,6 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
            eggs.add(new egg(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
         }
-
         breakEgg(eggs,0);
 
         System.out.println(ans);
