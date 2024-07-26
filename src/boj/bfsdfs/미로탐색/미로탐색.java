@@ -11,6 +11,7 @@ public class 미로탐색 {
     //map의 N,M위치 까지 반복
     public static int bfs(int startX, int startY, int[][] map){
         Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q2 = new ArrayDeque<>();
         q.offer(new int[]{startX, startY});
 
         while(!q.isEmpty()){
