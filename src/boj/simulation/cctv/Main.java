@@ -1,4 +1,4 @@
-package boj.simulation;
+package boj.simulation.cctv;
 
 import java.io.*;
 import java.util.ArrayList;
