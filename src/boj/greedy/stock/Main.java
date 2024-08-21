@@ -22,6 +22,7 @@ public class Main {
             int answer = 0;
             //주식 그래프의 꼭짓점 구하기 처음과 끝은 기본으로 넣고 시작한다.
             Deque<Integer> list = new ArrayDeque<>();
+            int max = days[0];
             list.add(days[0]);
             int prev = days[0];
             boolean asc  = days[0] < days[1];
@@ -34,6 +35,7 @@ public class Main {
                 else
                 {
                     list.add(days[j]);
+                    max = Math.max(max, days[j]);
                     asc = !asc;
                 }
                 prev = days[j];
@@ -42,25 +44,27 @@ public class Main {
             //꼭짓점을 순회하며 현재 위치에서 다음위치를 비교하여
             // 내려가면 가지고있다면 팔고 / 없다면 stay
             // 올라가면 산다
-            for(int j = 0; j < n-1; j++){
+            for(int j = 0; j < n && !list.isEmpty(); j++){
                 int nowEdge = list.poll();
-                int nextEdge = list.peek();
-                if(nowEdge <= nextEdge){
+                if(days[j]<=nowEdge){
                     wallet.push(days[j]);
-                }else{
+                }else if(!list.isEmpty() &&days[j] ==max){
+                    int nextEdge = list.peek();
                     while (!wallet.isEmpty()&&wallet.peek() < nowEdge) {
                         answer += nowEdge - wallet.peek();
                         wallet.pop();
                     }
-                }
-                if(nowEdge !=days[j]){
-                    list.addFirst(nowEdge);
-                }
-            }
 
-            while(!wallet.isEmpty()&&wallet.peek() < list.peek()){
-                answer += list.peek() - wallet.peek();
-                wallet.pop();
+                    if(nowEdge !=days[j]){
+                        list.addFirst(nowEdge);
+                    }
+                }else {
+                    while(!wallet.isEmpty()){
+                        answer += nowEdge - wallet.peek();
+                        wallet.pop();
+                    }
+                    break;
+                }
             }
             System.out.println(answer);
 
