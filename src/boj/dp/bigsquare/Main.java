@@ -33,6 +33,7 @@ public class Main {
             }
         }
 
+
         System.out.println(ans * ans); // 넓이를 출력합니다.
     }
 }
